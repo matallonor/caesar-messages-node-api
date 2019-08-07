@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  web:
+    build: .
+    volumes:
+      - ./app
+    depends_on:
+      - mongo
+    ports:
+      - "3000:3000"
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - 27017:27017

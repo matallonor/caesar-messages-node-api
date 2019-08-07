@@ -1,0 +1,14 @@
+{
+  "cwd": "./src",
+  "exclude": [
+    "container.js",
+    "app/Application.js",
+    "interfaces/api"
+  ],
+  "reporter": [
+    "html",
+    "lcov",
+    "text-summary"
+  ]
+}
+node nyc
